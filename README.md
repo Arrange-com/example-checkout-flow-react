@@ -75,7 +75,7 @@ And for realization this functionality left insert link of the checkout page wit
 
 And you will have 👇
 
-[<img src="./public/assets/readme-img1.png" width="624"/>]
+<img src="./public/assets/readme-img1.png" width="624"/>
 
 After successful payment you will get message from checkout component. For messages processing you should add `EventListener`
 
@@ -91,6 +91,6 @@ window.addEventListener(
 );
 ```
 
-[<img src="./public/assets/readme-img2.png" width="624"/>]
+<img src="./public/assets/readme-img2.png" width="624"/>
 
-You can look on the realization of checkout modal window on `react js` in project
+You can look on the realization of checkout modal window on `react js` in project.
