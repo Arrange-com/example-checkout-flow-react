@@ -24,7 +24,7 @@ After first/second step you will have `access_token` 🔑
 Now you can get data about activities, for this you should:<br/>
 `GET https://devapi.arrange.com/controller/activity/all`<br/>`HEADERS {"Authorization": "Bearer [access_token]"}`
 
-<p style='font-size: 21px; font-weight: 600'>🎉🎉🎉 Congratulations, you have received the required data 🎉🎉🎉</p><br>
+**_🎉🎉🎉 Congratulations, you have received the required data 🎉🎉🎉_**
 
 ## 2. **Add checkout flow in your website**
 
