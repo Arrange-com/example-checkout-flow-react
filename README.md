@@ -41,30 +41,29 @@ For implementation checkout flow you need two parameters:
 `activityLink`: link of the activity you need <br/>
 `classId`: id of the class you need
 
-```json
+```js
 
 {
-  "id": "3e27c144-f4ae-423d-9b6f-410f5c0676b0",
-  "link": "zf2tg3dqg", /*📌 THIS activity link*/
-  "title": "Activity 1",
-  "status": "ACTIVE",
-  "description": "Description",
-  "organizationId": "c068274a-8710-4c4b-8c8b-5d029881a30c",
-  ...
-  "activity_classes": [
+  id: "3e27c144-f4ae-423d-9b6f-410f5c0676b0",
+  link: "zf2tg3dqg", /*📌 THIS activity link*/
+  title: "Activity 1",
+  status: "ACTIVE",
+  description: "Description",
+  organizationId: "c068274a-8710-4c4b-8c8b-5d029881a30c",
+  activity_classes: [
       {
-          "id": "f0fbe1ba-87d3-43df-a975-b8b5f0ad96f6",  /*📌 THIS class id*/
-          "title": "Class Red",
-          "activityId": "3e27c144-f4ae-423d-9b6f-410f5c0676b0",
-          ...
-          "timelines": [
-              ...
-          ]
+        id: "f0fbe1ba-87d3-43df-a975-b8b5f0ad96f6",  /*📌 THIS class id*/
+        title: "Class Red",
+        activityId: "3e27c144-f4ae-423d-9b6f-410f5c0676b0",
+        timelines: [
+            ...
+        ],
+        ...
       },
     ...
   ],
-  "images": []
-},
+  ...
+}
 
 ```
 
@@ -74,7 +73,9 @@ And for realization this functionality left insert link of the checkout page wit
 "https://dev.arrange.com/checkout-page/${activityLink}?classId=${classId}&iframe=true"
 ```
 
-[<img src="./public/assets/readme-img1.png" width="624"/>](image.png)
+And you will have 👇
+
+[<img src="./public/assets/readme-img1.png" width="624"/>]
 
 After successful payment you will get message from checkout component. For messages processing you should add `EventListener`
 
@@ -90,6 +91,6 @@ window.addEventListener(
 );
 ```
 
-[<img src="./public/assets/readme-img2.png" width="624"/>](image.png)
+[<img src="./public/assets/readme-img2.png" width="624"/>]
 
 You can look on the realization of checkout modal window on `react js` in project
