@@ -26,11 +26,7 @@ Now you can get data about activities, for this you should:<br/>
 
 ## 🎉🎉🎉 Congratulations, you have received the required data 🎉🎉🎉
 
-<br/>
-
 ---
-
-<br/>
 
 ## 2. **Add checkout flow in your website**
 
