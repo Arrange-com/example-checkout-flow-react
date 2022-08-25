@@ -26,8 +26,6 @@ Now you can get data about activities, for this you should:<br/>
 
 ## 🎉🎉🎉 Congratulations, you have received the required data 🎉🎉🎉
 
----
-
 ## 2. **Add checkout flow in your website**
 
 Project in repository its example implementation the checkout in modal window.
