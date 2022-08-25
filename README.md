@@ -11,12 +11,10 @@ For this you need:
 
 After first/second step you will have `access_token` 🔑
 
-**_Just for tests, you can use a test user:_** <br/>
+**_Just for tests, you can use a test token:_** <br/>
 
 ```json
 
-"email": "arrange.example@gmail.com",
-"password": "1sQuAldEnTChr",
 "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYTAxY2E4MS1hNGE0LTQ1MmEtYWZiNi02ZDliYWQ3Y2RmNGQiLCJwZXJtaXNzaW9uSWQiOiJhOGQwOGEyNy03NWRkLTRmZjAtOGEzMy0zMDk0OGM2NmJiODYiLCJpYXQiOjE2NjEzNzMxNTAsImV4cCI6MTY5MjkzMDc1MH0.d0Gf5TzA7z1w233qtTxM7CB41YdXBv33RE529SfvjTo4TkXFWCzmCf5UwuZwuky2PO98HzntFTg0DPE3KIAuQ_4ee2E3eFE6Jt_GLoFNKcY4Y-PuXmCIQqaihXlFIXUErHIKtEJvFvpRVm3FlsP_5Ra2NAKJHNSUWK1Io3De_o8"
 
 ```
@@ -75,10 +73,10 @@ After successful payment you will get message from checkout component. For messa
 
 ```js
 window.addEventListener(
-  "message",
+  'message',
   (ev) => {
     if (ev != null && ev.data === '{"status":"success"}') {
-      console.log("Success ✔️");
+      console.log('Success ✔️');
     }
   },
   false
