@@ -26,4 +26,70 @@ Now you can get data about activities, for this you should:<br/>
 
 ## 🎉🎉🎉 Congratulations, you have received the required data 🎉🎉🎉
 
+<br/>
+
 ---
+
+<br/>
+
+## 2. **Add checkout flow in your website**
+
+Project in repository its example implementation the checkout in modal window.
+
+For implementation checkout flow you need two parameters:
+
+`activityLink`: link of the activity you need <br/>
+`classId`: id of the class you need
+
+```json
+
+{
+  "id": "3e27c144-f4ae-423d-9b6f-410f5c0676b0",
+  "link": "zf2tg3dqg", /*📌 THIS activity link*/
+  "title": "Activity 1",
+  "status": "ACTIVE",
+  "description": "Description",
+  "organizationId": "c068274a-8710-4c4b-8c8b-5d029881a30c",
+  ...
+  "activity_classes": [
+      {
+          "id": "f0fbe1ba-87d3-43df-a975-b8b5f0ad96f6",  /*📌 THIS class id*/
+          "title": "Class Red",
+          "activityId": "3e27c144-f4ae-423d-9b6f-410f5c0676b0",
+          ...
+          "timelines": [
+              ...
+          ]
+      },
+    ...
+  ],
+  "images": []
+},
+
+```
+
+And for realization this functionality left insert link of the checkout page with parameters in the `iframe`<br/>
+
+```json
+"https://dev.arrange.com/checkout-page/${activityLink}?classId=${classId}&iframe=true"
+```
+
+[<img src="./public/assets/readme-img1.png" width="624"/>](image.png)
+
+After successful payment you will get message from checkout component. For messages processing you should add `EventListener`
+
+```js
+window.addEventListener(
+  "message",
+  (ev) => {
+    if (ev != null && ev.data === '{"status":"success"}') {
+      console.log("Success ✔️");
+    }
+  },
+  false
+);
+```
+
+[<img src="./public/assets/readme-img2.png" width="624"/>](image.png)
+
+You can look on the realization of checkout modal window on `react js` in project
