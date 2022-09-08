@@ -9,6 +9,8 @@ export default function App() {
 
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState(null);
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
 
   const iframeRef = useRef(null);
 
@@ -22,10 +24,19 @@ export default function App() {
     window.addEventListener(
       "message",
       (ev) => {
-        if (ev != null && ev.data === '{"status":"success"}') {
-          console.log("Success ✔️");
-          //hack to thank page
-          iframeRef.current.className = "success";
+        if (ev != null && ev.data.type !== "webpackOk") {
+          console.log("ev: ", ev);
+          const data = JSON.parse(ev.data);
+          console.log("data: ", data);
+
+          if (data.width != null && data.height != null) {
+            setWidth(data.width);
+            setHeight(data.height);
+          }
+          if (data.status === "success") {
+            console.log("Success ✔️");
+            iframeRef.current.className = "success";
+          }
         }
       },
       false
@@ -55,9 +66,11 @@ export default function App() {
         <Modal open={open} onClose={handleClose}>
           <div className="checkout-modal">
             <iframe
-              src={`https://dev.arrange.com/checkout-page/${info.activityLink}?classId=${info.classId}&iframe=true`}
+              src={`http://localhost:3000/checkout-page/${info.activityLink}?classId=${info.classId}&iframe=true`}
               title="test"
               ref={iframeRef}
+              width={width}
+              height={height}
             ></iframe>
           </div>
         </Modal>

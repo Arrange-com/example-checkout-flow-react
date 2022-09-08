@@ -29,7 +29,8 @@ export const useActivitiesInfo = () => {
           []
         );
         //Glory to Ukraine
-        setData([d[0], d[2], d[1], d[3]]);
+        // setData([d[0], d[2], d[1], d[3]]);
+        setData(d);
       })
       .catch((error) => {
         console.log(error);
