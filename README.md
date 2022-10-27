@@ -22,6 +22,9 @@ After first/second step you will have `access_token` 🔑
 Now you can get data about activities, for this you should:<br/>
 `GET https://devapi.arrange.com/controller/activity/all`<br/>`HEADERS {"Authorization": "Bearer [access_token]"}`
 
+Also you can get class by id:
+`https://api.arrange.com/controller/activityClass/activityClassById?id=${classId}`<br/>`HEADERS {"Authorization": "Bearer [access_token]"}`
+
 **_🎉🎉🎉 Congratulations, you have received the required data 🎉🎉🎉_**
 
 ## 2. **Add checkout flow in your website**
@@ -73,10 +76,10 @@ After successful payment you will get message from checkout component. For messa
 
 ```js
 window.addEventListener(
-  'message',
+  "message",
   (ev) => {
     if (ev != null && ev.data === '{"status":"success"}') {
-      console.log('Success ✔️');
+      console.log("Success ✔️");
     }
   },
   false
