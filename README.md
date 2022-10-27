@@ -65,7 +65,7 @@ For implementation checkout flow you need two parameters:
 And for realization this functionality left insert link of the checkout page with parameters in the `iframe`<br/>
 
 ```json
-"https://dev.arrange.com/checkout-page/${activityLink}?classId=${classId}&iframe=true"
+"https://app.arrange.com/checkout-page/${activityLink}?classId=${classId}&iframe=true"
 ```
 
 And you will have 👇

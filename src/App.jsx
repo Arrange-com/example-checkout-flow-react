@@ -66,7 +66,7 @@ export default function App() {
         <Modal open={open} onClose={handleClose}>
           <div className="checkout-modal">
             <iframe
-              src={`https://dev.arrange.com/checkout-page/${info.activityLink}?classId=${info.classId}&iframe=true`}
+              src={`https://app.arrange.com/checkout-page/${info.activityLink}?classId=${info.classId}&iframe=true`}
               title="test"
               ref={iframeRef}
               width={width}
