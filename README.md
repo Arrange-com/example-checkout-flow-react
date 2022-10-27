@@ -6,8 +6,8 @@ First of all you need to get activities information, for this you should get _Au
 
 For this you need:
 
-1. **Login to your account:** <br/> `POST https://devapi.arrange.com/controller/auth/user/login` <br/> `BODY { "email": "your@email.com", "password": "password" }` <br/>`RESPONSE {access_token}`
-2. **If you have multiple organizations in your account, you need to login the organization:** <br/> `POST https://devapi.arrange.com/controller/auth/organization/login` <br/> `BODY { "organizationId": "some organization id" }`<br/>`HEADERS {"Authorization": "Bearer [access_token from previous step]"}` <br/>`RESPONSE {access_token}`<br/> Else skip this step.
+1. **Login to your account:** <br/> `POST https://api.arrange.com/controller/auth/user/login` <br/> `BODY { "email": "your@email.com", "password": "password" }` <br/>`RESPONSE {access_token}`
+2. **If you have multiple organizations in your account, you need to login the organization:** <br/> `POST https://api.arrange.com/controller/auth/organization/login` <br/> `BODY { "organizationId": "some organization id" }`<br/>`HEADERS {"Authorization": "Bearer [access_token from previous step]"}` <br/>`RESPONSE {access_token}`<br/> Else skip this step.
 
 After first/second step you will have `access_token` 🔑
 
@@ -20,7 +20,7 @@ After first/second step you will have `access_token` 🔑
 ```
 
 Now you can get data about activities, for this you should:<br/>
-`GET https://devapi.arrange.com/controller/activity/all`<br/>`HEADERS {"Authorization": "Bearer [access_token]"}`
+`GET https://api.arrange.com/controller/activity/all`<br/>`HEADERS {"Authorization": "Bearer [access_token]"}`
 
 Also you can get class by id:
 `https://api.arrange.com/controller/activityClass/activityClassById?id=${classId}`<br/>`HEADERS {"Authorization": "Bearer [access_token]"}`
